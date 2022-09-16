@@ -1,0 +1,18 @@
+.c-section-title {
+    margin-bottom: $spacer-lg;
+    &__title {
+        font-family: $optimaReg;
+        font-size: $text-xxl;
+        line-height: 1;
+        margin-bottom: $spacer-xxs;
+        @include media-breakpoint-up(md){
+            font-size: $text-xxxl;
+        }
+    }
+    &__deco {
+        width: $spacer-xxxl;
+        height : auto;
+        overflow: visible;
+       
+    }
+}

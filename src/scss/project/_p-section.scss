@@ -1,0 +1,8 @@
+.p-section {
+    padding: $spacer-xxl 0;
+    position: relative;
+    @include media-breakpoint-up(md){
+        padding: $spacer-xxxl 0;
+    }
+    
+}

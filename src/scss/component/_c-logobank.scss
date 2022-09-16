@@ -1,0 +1,51 @@
+.c-logobank {
+    border: 1px solid transparentize($black, 0.6);
+    padding: $spacer-sm;
+    position: relative;
+    text-align: center;
+    margin-bottom: $spacer-xl;
+    @include media-breakpoint-up(md){
+        padding: $spacer-lg;
+    }
+    &__title {      
+        display: inline-block;
+        font-weight: bold;
+        position: absolute;
+        background-color: white;
+        padding: $spacer-xs $spacer-md;  
+        white-space: nowrap;
+        font-weight: $ja-reg;
+        top: -18px;
+        margin: 0 auto;
+        transform: translateX(-50%);
+        
+       
+    }
+}
+
+.c-logobank {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+        li {
+            a {
+                display: block;
+                transform: scale(1);
+                height: $spacer-xxl;
+                width: auto;
+                transition: all 0.3s ease-in-out;
+               
+                img {
+                    object-fit: contain;
+                    height: 100%;
+                    width: auto;
+                }
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

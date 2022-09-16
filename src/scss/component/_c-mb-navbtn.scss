@@ -1,0 +1,8 @@
+.c-mb-navbtn {
+    position: relative;
+    z-index: 999;
+    all: unset;
+    @include media-breakpoint-up(lg){
+        display: none;
+    }
+}

@@ -1,0 +1,61 @@
+.c-modal {
+   
+    background-color: transparentize($primary-400, 0.4);
+    .modal-content {
+        border: 2px solid $black;
+        border-radius: 0;
+    }
+    .modal-body {
+       padding: $spacer-lg;
+       position: relative;
+      
+    }
+    &__header {
+        display: flex;
+        gap: $spacer-lg;
+        align-items: center;
+        margin-bottom: $spacer-md;
+        &__img {
+            width: 35%;
+        }
+       }
+
+       &-btn {
+        all: unset;
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        border: 2px solid $black;
+        .icon-close {
+            fill: $black;
+            transition: all 0.3s ease-in-out;
+            transform-origin: center center;
+            transform: scale(0.9);
+        }
+        &:hover {
+            .icon-close {
+                fill: $primary-400;
+                transform: scale(1) rotate(90deg);
+                
+
+            }
+        }
+       }
+
+       // modal size 
+       .modal-dialog {
+        @include media-breakpoint-only(md) {
+            max-width: 80vw;
+        }
+
+        
+       }
+
+
+    &.video {
+        .modal-body {
+            padding: 0;
+        } 
+    }
+   
+}

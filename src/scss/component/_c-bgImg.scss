@@ -1,0 +1,54 @@
+.c-bgImg {
+    position: absolute;
+    z-index: -1;
+}
+// cta
+.c-bgImg__cta-l {
+    bottom: -10%;
+    left: -10%;
+    height: 150px;
+    @include media-breakpoint-up(md){
+        bottom: 10%;
+        left: -10%;
+        height: 200px;
+    }
+}
+.c-bgImg__cta-r {
+    top: -20%;
+    right: -10%;
+    height: 120px;
+    @include media-breakpoint-up(md){
+        top: 20%;
+        right: -10%;
+        height: 180px;
+    }
+}
+// theme
+.c-bgImg__theme-1 {
+    left: 2%;
+    top: -3%;
+  //  height: 260px;
+  height: 15vw;
+}
+.c-bgImg__theme-2 {
+    right: -10%;
+    top: 10%;
+  //  height: 317px;
+  height: 24vw;
+    
+    
+}
+.c-bgImg__theme-3 {
+    left: 12%;
+    top: 40%;
+    // height: 200px;
+    height: 15vw;
+}
+.c-bgImg__theme-4 {
+    right: 10%;
+    top: 80%;
+  //  height: 210px;
+    height: 15vw;
+    filter: blur(3px);
+    
+}

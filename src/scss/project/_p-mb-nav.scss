@@ -1,0 +1,40 @@
+.p-mb-nav {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: transform 0.8s ease-in-out;
+   div.p-mb-nav__wrap {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    .p-nav__navigation {
+        opacity: 0;
+        filter: blur(1.5rem);
+        transition: all 0.8s ease-in-out;
+    }
+   }
+   &.is-active {
+    pointer-events: all;
+    display: block;
+    transform: translateY(0);
+     
+    div.p-mb-nav__wrap {
+        .p-nav__navigation {
+            opacity: 1;
+            filter: blur(0);
+        }
+    }
+   }
+}

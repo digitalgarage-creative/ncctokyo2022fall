@@ -1,0 +1,66 @@
+// colours
+$primary-400:            #01BDC5;
+$primary-600:            #38B6E3;
+$primary-800:            #339FDD;
+$secondary-400:          #5FE48F;
+$secondary-600:          #77C0B6;
+$secondary-800:          #27CDAF;
+$tertiary-200:           #8B99FF;
+$tertiary-400:           #7090FF;
+$tertiary-600:           #5486FF;
+$tertiary-800:           #7AA5EE;
+$accent:                 #8064D8;
+$gray:                   #B3B3E8;
+$neutral:                #9BBBDF;
+
+$black:                  #414040;
+
+
+
+
+@include media-breakpoint-up(md)  {
+    :root {
+        //  Type scale // you can manage typography editing only these 2 variables
+        --text-base-size: 1.22em;
+        --text-scale-ratio: 1.25;
+        
+    }
+}
+// Typescale
+$textBaseSize: 1.1rem;
+$textScaleRatio: 1.2;
+
+$text-xs:   calc( 0.5em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+$text-sm:   calc( 0.7em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+$text-md:   calc( 0.9em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+$text-lg:   calc( 1.3em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+$text-xl:   calc( 1.8em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+$text-xxl:  calc( 2.8em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+$text-xxxl: calc( 3.8em * (#{$textScaleRatio} * #{$textScaleRatio}) );
+
+
+
+// Spacing
+$spacer-unit: 1em;
+$spacer-xxs:  calc(0.25 * #{$spacer-unit});
+$spacer-xs:   calc(0.5 * #{$spacer-unit});
+$spacer-sm:   calc(0.75 * #{$spacer-unit});
+$spacer-md:   calc(1.25 * #{$spacer-unit});
+$spacer-lg:   calc(2 * #{$spacer-unit});
+$spacer-xl:   calc(3.25 * #{$spacer-unit});
+$spacer-xxl:  calc(5.25 * #{$spacer-unit});
+$spacer-xxxl:  calc(8.25 * #{$spacer-unit});
+
+
+// rotate angles
+$rotation-sm: 15;
+$rotation-md: 22.5;
+$rotation-lg: 45;
+
+@mixin va-align {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

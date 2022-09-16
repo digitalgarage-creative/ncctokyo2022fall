@@ -1,0 +1,90 @@
+.c-profile {
+    opacity: 0;
+    width: calc(100%/2);
+    @include media-breakpoint-up(md){
+        width: calc(100%/3);
+    }
+ 
+    &__content {
+        padding: 0 $spacer-sm;
+        &__name {
+            margin-top: $spacer-xs;
+            line-height: 1.2;
+            font-family: $optimaReg;
+            font-size: $text-md;
+            margin-bottom: $spacer-sm;
+            transition: color 0.3s ease-in-out;
+            will-change: color;
+            span {
+                display: block;
+                font-size: $text-xs;
+                transition: color 0.3s ease-in-out;
+                will-change: color;
+                margin-top: $spacer-xxs;
+            }
+        }
+        &__details {
+            font-size: $text-xs;
+            
+        }
+    }
+    &__img {
+        filter: grayscale(0.8);
+        transition: filter 0.3s ease-in-out;
+    }
+    &__mask {
+        transform: scale(1);
+        transform-origin: center center;
+        transition: all 0.3s ease-in-out;
+    }
+     button {
+        display: inline-block;
+        all: unset;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        &:hover {    
+            .c-profile__img {
+                filter: grayscale(0);
+            }  
+            .c-profile__content__name {
+                color: $primary-400;
+                span {
+                    color: $neutral;
+                }
+            } 
+            .c-profile__mask {
+               // hover rotation
+              
+               background-color: $primary-400;
+                &[data-rotation="sm"] {
+                    transform: scale(0.8) rotate(15deg);
+                   
+                }
+                &[data-rotation="-sm"] {
+                    transform: scale(0.8) rotate(-15deg);
+                }
+                // hover rotation
+                &[data-rotation="md"] {
+                    transform: scale(0.7) rotate(22.5deg);
+                }
+                &[data-rotation="-md"] {
+                    transform: scale(0.7) rotate(-22.5deg);
+                }
+
+                // hover rotation
+                &[data-rotation="lg"] {
+                    transform: scale(0.6) rotate(45eg);
+                }
+                &[data-rotation="-lg"] {
+                    transform: scale(0.6) rotate(-45deg);
+                }
+
+               
+            }
+        }
+    }
+  
+
+}
+

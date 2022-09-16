@@ -1,0 +1,46 @@
+body {
+    font-size: $textBaseSize;
+    color: $black;
+    &.ja {
+        font-family: $noto;
+    }
+    &.en {
+        font-family: $opensans;
+    }
+    p {
+        line-height: 1.7;
+    }
+}
+main {
+    width: 100vw;
+    overflow: hidden;
+}
+#viewport {
+    overflow: hidden;
+    position: fixed;
+    height:100%;
+    width:100%;
+    top: 0;
+    left: 0;
+}
+.is-flex {
+    display: flex;
+    justify-content: center;
+    &-centered {
+        align-items: center;
+    }
+}
+.is-uppercase {
+    text-transform: uppercase;
+}
+.is-faded {
+    opacity: 0.6;
+    
+}
+.is-hidden {
+    opacity: 0;
+    display: none;
+}
+.is-primary-color {
+    color: $primary-400;
+}

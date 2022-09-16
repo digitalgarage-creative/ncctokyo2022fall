@@ -1,0 +1,54 @@
+.c-video-btn {    
+    margin-top: $spacer-xl;
+    button {
+        all: unset;
+        position: relative;
+        overflow: hidden;
+        background-color: $neutral;
+        img {
+           transform: scale(1.05);
+           transform-origin: center center;
+           transition: all 0.5s ease-in-out;
+           will-change: transition;
+        }
+
+        &:hover {
+            .c-modal__video__play {
+                height: calc(#{$spacer-xxl} + 20px);
+                width: calc(#{$spacer-xxl} + 20px);
+
+                svg {
+                    height: calc(#{$spacer-lg} + 8px);
+                }
+            }
+            img {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+        }
+    }
+    &__play {
+       @include va-align;
+        height: $spacer-xxl;
+        width: $spacer-xxl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.5s ease-in-out;
+        svg {
+            transition: all 0.5s ease-in-out;
+            height: $spacer-lg;
+            width: auto;
+            margin-left: $spacer-xxs;
+        }
+    }
+    &__title {
+        margin-top: $spacer-xxs;
+        font-family: $optimaReg;
+        font-size: $text-md;
+    }
+}

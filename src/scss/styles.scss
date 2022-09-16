@@ -1,0 +1,42 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+// @import "~bootstrap/scss/bootstrap";
+// // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// // 2. Include any default variable overrides here
+
+// // 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/utilities";
+
+// // 4. Include any optional Bootstrap components as you like
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/transitions";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+ 
+
+// base
+@import "./base/bundle";
+
+
+// project
+@import "./project/bundle";
+
+// component
+@import "./component/bundle";

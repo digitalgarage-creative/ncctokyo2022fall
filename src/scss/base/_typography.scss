@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;500&display=swap');
+@font-face {
+    font-family: "OptimaNovaRegular";
+    src: url('webFonts/OptimaNovaRegular/font.woff2') format('woff2'), url('webFonts/OptimaNovaRegular/font.woff') format('woff');
+  }
+  @font-face {
+    font-family: "OptimaNovaLight";
+    src: url('webFonts/OptimaNovaLight/font.woff2') format('woff2'), url('webFonts/OptimaNovaLight/font.woff') format('woff');
+  }
+  @font-face {
+    font-family: "OptimaNovaMedium";
+    src: url('webFonts/OptimaNovaMedium/font.woff2') format('woff2'), url('webFonts/OptimaNovaMedium/font.woff') format('woff');
+  }
+  @font-face {
+    font-family: "OptimaNovaDemi";
+    src: url('webFonts/OptimaNovaDemi/font.woff2') format('woff2'), url('webFonts/OptimaNovaDemi/font.woff') format('woff');
+  }
+
+  $optimaLight:     OptimaNovaLight;
+  $optimaReg:       OptimaNovaRegular;
+  $optimaMed:       OptimaNovaMedium;
+  $optimaDemi:      OptimaNovaDemi;
+  $noto:            'Noto Sans JP', sans-serif;
+  $opensans:        'Open Sans', sans-serif;
+  $ja-bold : 700;
+  $ja-med : 400;
+  $ja-reg: 300;
+  
+
+.is-bold {
+    font-weight: 700;
+}
+.is-med {
+    font-weight: 400;
+}
+.is-en-font {
+    font-family:   $optimaReg;
+}
+
+.is-text-xxxl {
+    font-size: $text-xxxl;
+}
+.is-text-xxl {
+    font-size: $text-xxl;
+}
+.is-text-xl {
+    font-size: $text-xl;
+}
+.is-text-lg {
+    font-size: $text-lg;
+}
+.is-text-md {
+    font-size: $text-md;
+}
+.is-text-sm {
+    font-size: $text-sm;
+}
+.is-text-xs {
+    font-size: $text-xs;
+}
+a {
+    text-decoration: none;
+   
+}
+

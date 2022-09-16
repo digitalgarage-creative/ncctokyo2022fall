@@ -1,0 +1,28 @@
+.c-ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    &-inline {
+        li  {
+            display: inline;
+        }
+    }
+    &-simple {
+        li {
+            padding-left: $spacer-md;
+            position: relative;
+            margin-bottom: $spacer-xxs;
+            &:after {
+                content: '・';
+                position: absolute;
+                 top: 0;
+                 left: 0;
+
+            }
+        }
+    }
+ 
+    a {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,12 @@
+.p-footer {
+    border-top: 5px solid $primary-400;
+    background-color: $black;
+    color: white;
+    padding: $spacer-lg 0;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
+

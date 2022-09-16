@@ -1,0 +1,28 @@
+.c-nav__lang {
+    display: none;
+    font-family: $optimaReg;
+    @include media-breakpoint-up(lg){
+        display: block;
+    }
+    ul li {
+        &.current {
+            a {
+                opacity: 1;
+                pointer-events: none;
+            }
+        }
+        a {
+            color: $black;
+           
+            padding: 0 $spacer-xxs;
+            opacity: 0.5;
+            transition: all 0.3s ease-in-out;
+            will-change: transition;
+            &:hover {
+                opacity: 1;
+               
+            }
+        }
+    }
+}
+
