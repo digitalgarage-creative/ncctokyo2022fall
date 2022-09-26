@@ -5,4 +5,44 @@
     @include media-breakpoint-up(lg){
         display: none;
     }
+    span {
+        margin: 8px 0;
+        height: 2px;
+        width: $spacer-md;
+        background-color: $black;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        transform-origin: center center;
+        &:after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $black;
+            transform-origin: center center;
+            transition: all 0.3s ease-in-out;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $black;
+            transform-origin: center center;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &.is-active {
+        span {
+            background-color: $primary-400;
+            transform: rotate(45deg);
+        }
+        span:before { width: 40% ; background-color: $secondary-400;}
+        span:after {  width: 80% ; background-color: $tertiary-600;}
+    }
 }

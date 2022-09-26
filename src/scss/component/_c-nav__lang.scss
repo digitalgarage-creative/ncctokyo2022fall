@@ -24,5 +24,12 @@
             }
         }
     }
+    &__mb {
+        font-size: $text-md;
+        color: transparentize($black, 0.6);
+        a {
+            font-size: $text-md!important;
+        }
+    }
 }
 

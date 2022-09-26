@@ -3,10 +3,10 @@
     button {
         all: unset;
         position: relative;
-        overflow: hidden;
+        
         background-color: $neutral;
         img {
-           transform: scale(1.05);
+       
            transform-origin: center center;
            transition: all 0.5s ease-in-out;
            will-change: transition;
@@ -22,7 +22,7 @@
                 }
             }
             img {
-                transform: scale(1);
+               
                 opacity: 0.6;
             }
         }

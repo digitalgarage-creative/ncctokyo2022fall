@@ -12,8 +12,7 @@ let bodyScrollBar;
 
 function initSmoothScrollBar(){
 
-  bodyScrollBar = Scrollbar.init(document.querySelector('#viewport'), {damping:0.05, delegateTo: document });
-    bodyScrollBar.setPosition(0, 0);
+  bodyScrollBar = Scrollbar.init(document.querySelector('#viewport'), {damping:0.07});
      bodyScrollBar.track.xAxis.element.remove();
  
  
@@ -38,7 +37,7 @@ function initSmoothScrollBar(){
  
          link.addEventListener('click', (e) => {
              e.preventDefault();
-             bodyScrollBar.scrollIntoView(document.querySelector(target),{damping: 0.05});
+             bodyScrollBar.scrollIntoView(document.querySelector(target),{damping: 0.07});
          });
  
      });
@@ -89,7 +88,7 @@ function kvAnimation(){
         opacity: 0 
       },
         {
-          opacity:1,
+          opacity: 1,
           ease: "power.inOut",
       }, "=-0.3");
 
@@ -217,7 +216,8 @@ function initSectionAnimation() {
       const animateIn = section.querySelectorAll('.js-in');
       const profileCardWrap = section.querySelector('.p-profile');
       const profileCard = section.querySelectorAll('.c-profile');
-      const videoCard = section.querySelector('.c-video-btn');
+      const video = section.querySelector('.video');
+      const videoCard = section.querySelectorAll('.c-video-btn');
 
       const bgSquares = section.querySelectorAll('.c-bgImg');
 
@@ -236,7 +236,7 @@ function initSectionAnimation() {
         yPercent: 0,
         scrollTrigger: {
           trigger: section,
-          start: '20% 90%', 
+          start: '0% 90%', 
           toggleActions: "play none none reverse ",  
          
       }
@@ -261,7 +261,7 @@ function initSectionAnimation() {
         ease: "power3.inOut",
         scrollTrigger: {
                 trigger: section,
-                start: '0% 90%', 
+                start: '-10% 90%', 
                 toggleActions: "play none none reverse ",
                 //  markers: {startColor: "orange", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 20}
                 // end: 'bottom bottom',   
@@ -282,13 +282,13 @@ function initSectionAnimation() {
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: section,
-          start: '30% 80%', 
+          start: '0% 70%', 
           toggleActions: "play none none reverse ",
           // end: 'bottom bottom',   
       }
       });
      }
-     if (videoCard) {
+     if (video) {
       // tween for video
       gsap.fromTo(videoCard, {
         y: 200,
@@ -301,14 +301,14 @@ function initSectionAnimation() {
         rotation: 0,
         ease: "power1.inOut",
         scrollTrigger: {
-          trigger: ".c-video-btn",
+          trigger: videoCard,
           start: '30% 90%', 
           toggleActions: "play none none reverse ",
-         
-          // end: 'bottom bottom',   
       }
       });
     }
+
+
     if (profileCardWrap) {
       // tween for profile card
       gsap.fromTo(profileCard, {
@@ -332,38 +332,7 @@ function initSectionAnimation() {
               }
         });
       }
-      
-      // gsap.fromTo('.p-cta-l', {
-      //   y: '300',
-      // }, {
-      //   y: '-300px',
-      //   scrollTrigger: {
-      //     trigger: '.p-cta-l',
-      //     start: '100% 100%', 
-        
-      //     toggleActions: "play none none reverse ",  
-      //     scrub: true,   
-      //     // end: 'bottom bottom', 
-      //     markers: {startColor: "orange", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 20}  
-      // }
-      // });
-      // gsap.fromTo('.p-cta-r', {
-      //   y: '300px',
-      // }, {
-      //   y: '-600px',
-      //   scrollTrigger: {
-      //     trigger: '.p-cta-l',
-      //     start: '100% 100%', 
-        
-      //     toggleActions: "play none none reverse ",  
-      //     scrub: true,   
-      //     // end: 'bottom bottom', 
-      //     markers: {startColor: "orange", endColor: "blue", fontSize: "18px", fontWeight: "bold", indent: 20}  
-      // }
-      // });
-
-
-
+  
 
   });
 

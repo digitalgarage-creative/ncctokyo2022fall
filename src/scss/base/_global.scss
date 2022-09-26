@@ -10,6 +10,7 @@ body {
     p {
         line-height: 1.7;
     }
+
 }
 main {
     width: 100vw;
@@ -44,3 +45,95 @@ main {
 .is-primary-color {
     color: $primary-400;
 }
+
+.is-link {
+    color: $primary-800;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $primary-800;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        transition: background-color 0.3s ease-in-out;
+    }
+    &:hover {
+        color: $primary-400;
+        &:after {
+            background-color: $primary-400;
+        }
+    }
+}
+
+
+// Cookie
+#cookie{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px -15px 50px -15px #949494;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    
+  }
+  #cookie .container{
+    width: 1024px;
+    height: 55px;
+    margin: 0 auto;
+    display: flex;
+    color:#000;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #cookie .container p{
+    font-size: 12px!important;
+    margin: 0;
+  }
+  #cookie .container .text br{
+    display: none;
+  }
+  #cookie .container .agree{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 16px -6px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  #cookie .container .agree:hover{
+    opacity: 0.5;
+  }
+  @media screen and (max-width: 1000px) {
+    #cookie{
+      box-shadow: 0 -1vw 7vw -4vw #949494;
+    }
+    #cookie .container{
+      width: 100%;
+      height: 15vw;
+    }
+    #cookie .container p{
+      font-size: 2vw!important;
+    }
+    #cookie .container .text br{
+      display: block;
+    }
+    #cookie .container .agree{
+      width: 20vw;
+      height: 8vw;
+      line-height: 8vw;
+      font-size: 3vw;
+      border-radius: 1vw;
+    }
+   
+  }

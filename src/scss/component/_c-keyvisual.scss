@@ -1,6 +1,6 @@
 
 .c-keyvisual {
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
     max-width: 100vvw;
     min-height: 650px;
@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     @include media-breakpoint-up(sm){
+        height: 80vh;
         min-height: 700px;
     }
     @include media-breakpoint-up(sm){
@@ -24,8 +25,10 @@
         right: 0;
         z-index: 10;
         margin: 0 auto;
-        padding: $spacer-sm ;
-        bottom: $spacer-md;
+        padding: $spacer-sm $spacer-lg $spacer-sm $spacer-sm ;
+        bottom: $spacer-sm;
+       
+        opacity: 0;
         @include media-breakpoint-up(sm){
             position: absolute;
             left: 0;
@@ -35,7 +38,7 @@
             margin-top: 3rem!important;
         }
         @include media-breakpoint-up(md){
-            width: 57vh;
+            width: 64vh;
             padding: 0;
             margin-top: 4rem!important;
            @include va-align;
@@ -63,7 +66,7 @@
       transform: scale(1);
       transform-origin: top center;
       z-index: 1;
-      transform: scale(2.9) translateX(20%) translateY(-17%);
+      transform: scale(3.9) translateX(20%) translateY(-7%);
       @include media-breakpoint-up(sm){
         transform: scale(2.4) translateX(17%) translateY(-35%);
      //   border: 1px solid yellow;
