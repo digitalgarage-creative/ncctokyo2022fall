@@ -16,6 +16,7 @@ main {
     width: 100vw;
     overflow: hidden;
 }
+
 #viewport {
     overflow: hidden;
     position: fixed;
@@ -23,6 +24,7 @@ main {
     width:100%;
     top: 0;
     left: 0;
+
 }
 .is-flex {
     display: flex;

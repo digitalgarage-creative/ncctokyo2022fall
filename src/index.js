@@ -2,17 +2,20 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Scrollbar from 'smooth-scrollbar';
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 import { bootstrap } from 'bootstrap';
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 import './scss/styles.scss';
+
+
+
 
 
 let bodyScrollBar;
 
 function initSmoothScrollBar(){
 
-  bodyScrollBar = Scrollbar.init(document.querySelector('#viewport'), {damping:0.07});
+  bodyScrollBar = Scrollbar.init(document.querySelector('#viewport'), {damping:0.1});
      bodyScrollBar.track.xAxis.element.remove();
  
  
@@ -37,7 +40,7 @@ function initSmoothScrollBar(){
  
          link.addEventListener('click', (e) => {
              e.preventDefault();
-             bodyScrollBar.scrollIntoView(document.querySelector(target),{damping: 0.07});
+             bodyScrollBar.scrollIntoView(document.querySelector(target),{damping: 0.1});
          });
  
      });
@@ -363,12 +366,13 @@ function initParallaxSpeed(){
 }
 
 
+
 init();
 
 function init(){
 
- initSmoothScrollBar();
- initScrollto();
+  initSmoothScrollBar();
+  initScrollto();
   kvAnimation();
   initModalVideo();
   initMbNav();
@@ -376,4 +380,5 @@ function init(){
   hideNavOnLoad();
   initSectionAnimation();
   initParallaxSpeed();
+
 }
