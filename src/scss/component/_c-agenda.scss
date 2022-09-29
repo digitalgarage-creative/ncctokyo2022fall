@@ -57,20 +57,34 @@
     justify-content: center;
     align-items: center;
     filter: grayscale(0.8);
-    transition: all 0.3s ease-in-out;
+  
     p {
         margin: 0;
         font-size: 90%;
         font-family: $optimaReg;
         margin-left: $spacer-sm;
+        line-height: 1.4;
+        transition: all 0.3s ease-in-out;
+    }
+    &__role {
+        display: block;
+        color: $primary-800;
+        transition: all 0.3s ease-in-out;
     }
     &__img {
         height: 60px;
         width: 60px;
+        transition: all 0.3s ease-in-out;
     }
     &:hover {
-        color: $primary-400;
+        p {
+            color: $primary-400;
+        }
+       
         filter: grayscale(0);
+        .c-speaker-btn__role {
+            color: $primary-400;
+        }
     }
 }
 
